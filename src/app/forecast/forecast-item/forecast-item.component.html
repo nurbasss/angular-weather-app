@@ -1,0 +1,14 @@
+<div class="forecast-item-container">
+    <h6>{{forecastItem.dt * 1000| date:'EE'}}</h6>
+    <div class="weather-icon">
+        <img src="{{forecastItem.weather[0].icon}}" alt="">
+    </div>
+    <p>{{forecastItem.weather[0].main}}</p>
+    <span>
+        {{forecastItem.temp.max | number: '1.0-0'}}
+        <sup>&deg;</sup>
+        <small>/</small>
+        {{forecastItem.temp.min | number: '1.0-0'}}
+        <sup>&deg;</sup>
+    </span>
+</div>

@@ -1,0 +1,9 @@
+<div class="forecast-container">
+    <h2>Weekly Weather</h2>
+    <div class="forecast-items">
+        <app-forecast-item *ngFor="let item of forecastList"
+            [forecastItem]="item"
+        ></app-forecast-item>
+    </div>
+    
+</div>

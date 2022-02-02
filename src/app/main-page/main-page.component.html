@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="search_bar">
+    <img src="../../assets/search-icon.svg" class="search_icon">
+    
+    <input type="text"
+        placeholder="Search for location"
+        matInput
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+        #cityCtrl
+        (keydown.enter)="search(cityCtrl.value)"
+        >
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option 
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
+            (click)="search(cityCtrl.value)"
+            >
+            {{option}}
+        </mat-option>
+    </mat-autocomplete>
+    
+    <button type="button" class="location_button">
+        <img src="../../assets/location-icon.svg" alt="" (click)="searchGeo()">
+    </button>
+</div>
+
+<app-current-weather *ngIf="currentWeather" [weather]="currentWeather" ></app-current-weather>
+<app-forecast  *ngIf="currentWeather" [forecastList]="forecastList"></app-forecast>
+
+<app-footer></app-footer>

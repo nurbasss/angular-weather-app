@@ -1,0 +1,154 @@
+@import '../../variables.scss';
+
+hr{
+  display: none;
+}
+.weather-container{
+  width: 100%;
+  max-width: 900px;
+  background-color: $light-grey;
+  border-radius: 15px;
+  font-family: $font-Roboto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+
+  h2{
+    padding-top: 24px;
+    padding-left: 24px;
+    color: #a9a9a9;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+
+.current-weather-container{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 48px;
+  padding-right: 24px;
+
+}
+
+.current-weather{
+  
+  h4{
+    font-size: 30px;
+    font-weight: medium;
+    color: $dark-blue;
+    margin-bottom: 40px;
+  }
+
+  .weather-icon{
+    width: 100px;
+    height: 100px;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  span {
+    font-weight: 200;
+    font-size: 100px;
+    color: #4a6fa1;
+  }
+
+  h6{
+    font-size: 24px;
+    color: #7b98b2;
+  }
+}
+
+.current-weather-info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+
+  .feels-like{
+    font-size: 20px;
+    color: $blue;
+  }
+
+  .high-low-container{
+    display: flex;
+    gap: 10px;
+
+    .weather-degree{
+      display: flex;
+      align-items: center;
+      font-weight: medium;
+      font-size: 20px;
+      color: $blue;
+      gap: 5px;
+    }
+    
+  }
+
+  .info-row{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 20px;
+    color: #4a6fa1;
+
+    img{
+      width: 20px;
+      height: 20px;
+    }
+
+    span{
+      font-weight: medium;
+    }
+
+  }
+}
+
+@media screen and (max-width: 620px){
+  .weather-container{
+    h2{
+      padding-top: 18px;
+      padding-left: 18px;
+    }
+  }
+
+  hr{
+    display: block;
+    width: 300px;
+    height: 1px;
+    background-color: $dark-blue;
+    border: none;
+    margin: 20px 0;
+  }
+
+  .current-weather-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-right: 0;
+    margin-top: 20px;
+  }
+
+  .current-weather{
+    text-align: center;
+    h4, h6{
+      font-size: 20px;
+      font-weight: medium;
+    }
+
+    span{
+      font-size: 70px;
+    }
+
+  }
+  .current-weather-info{
+    margin-top: 20px;
+
+  }
+}

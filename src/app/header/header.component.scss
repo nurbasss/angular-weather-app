@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1{
+        font-family: 'Roboto';
+        font-size: 2.2rem;
+        color: $dark-blue;
+        font-weight: 600;
+    }
+
+    .header_icons_container{
+        display: flex;
+        align-items: center;
+    }
+
+
+}

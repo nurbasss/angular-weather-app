@@ -1,0 +1,62 @@
+@import '../../variables.scss';
+:host{
+    width: 90%;
+}
+.search_bar{
+    display: flex;
+    height: 3.25rem;
+    border-radius: 26px;
+    background: $light-grey;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.4rem;
+    align-items: center;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    width: 100%;
+
+    form{
+        flex: 1;
+    }
+
+    input{
+        margin-left: 1rem;
+        border: none;
+        background-color: $light-grey;
+        font-size: 1.125rem;
+        color: $dark-blue;
+        width: 100%;
+        
+        
+        &:focus {
+            outline: none;
+        }
+          
+    }
+
+    .search_icon{
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+        fill: $dark-blue;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .location_button{
+        margin-right: 1.2rem;
+        border: none;
+        height: 25px;
+        background: none;
+        cursor: pointer;
+
+        img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
