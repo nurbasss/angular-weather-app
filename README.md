@@ -1,7 +1,10 @@
 # About project
 Live Demo https://frosty-wilson-be7752.netlify.app/
+
 This app shows current weather in place user entered acording to OpenWeatherMap API. 
+
 Also I made some manipulations to show forecast for next weekdays, because weatherAPI provides forecast request for payment. But I complete it with another type of request.
+
 During project I tried all my best in data binding and learn pipes in Angular and also practice RxJs.
 
 # DailyWeatherApp
